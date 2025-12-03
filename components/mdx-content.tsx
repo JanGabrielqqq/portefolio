@@ -6,7 +6,7 @@ import type { ComponentType } from "react"
 type Props = { slug: string }
 
 const mdxMap: Record<string, ComponentType> = {
-  "hello-world": dynamic(() => import("@/content/blog/hello-world.mdx"), { ssr: false }),
+  "starting-a-blog-w-ai": dynamic(() => import("@/content/blog/starting-a-blog-w-ai.mdx"), { ssr: false }),
 }
 
 export function MdxContent({ slug }: Props) {

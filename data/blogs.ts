@@ -6,8 +6,8 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "hello-world",
-    title: "Hello world",
+    id: "starting-a-blog-w-ai",
+    title: "Starting A Blog About Building With AI Agents",
     date: "Dec 3, 2025",
-  },
+  }
 ]

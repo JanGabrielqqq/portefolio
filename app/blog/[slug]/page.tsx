@@ -1,14 +1,11 @@
 "use client"
 
-import { notFound } from "next/navigation"
+import { notFound, useParams } from "next/navigation"
 import { blogPosts } from "@/data/blogs"
 import { MdxContent } from "@/components/mdx-content"
 
-interface Props {
-  params: { slug: string }
-}
-
-export default function BlogPostPage({ params }: Props) {
+export default function BlogPostPage() {
+  const params = useParams<{ slug: string }>()
   const post = blogPosts.find((p) => p.id === params.slug)
   if (!post) return notFound()
 
@@ -19,7 +16,7 @@ export default function BlogPostPage({ params }: Props) {
           <p className="text-sm text-muted-foreground mb-2">{post.date}</p>
           <h1 className="text-4xl font-bold">{post.title}</h1>
         </div>
-        <article className="space-y-4 text-base text-foreground">
+        <article className="mdx-content">
           <MdxContent slug={post.id} />
         </article>
       </main>
