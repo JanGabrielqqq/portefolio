@@ -14,9 +14,11 @@ export const personalInfo = {
     linkedin: "https://linkedin.com/in/jangabrielque",
     github: "https://github.com/jangabrielqqq",
     email: "mailto:jangabrielqqq@gmail.com",
+    uicomp: "https://quffeui.vercel.app",
     handles: {
       linkedin: "jangabrielque",
       github: "jangabrielqqq",
+      uicomp: "My UI Compents",
     },
   },
   about: [

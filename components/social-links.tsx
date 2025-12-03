@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Mail } from "lucide-react"
+import { ArrowRight, Link2 } from "lucide-react"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
 import { personalInfo } from "@/config"
 
@@ -17,10 +17,10 @@ const socialLinks = [
     Icon: GithubIcon,
   },
   {
-    name: "Email",
-    handle: personalInfo.email,
-    url: personalInfo.social.email,
-    Icon: Mail,
+    name: "QuffeUI",
+    handle: personalInfo.social.handles.uicomp,
+    url: personalInfo.social.uicomp,
+    Icon: Link2,
   },
 ]
 

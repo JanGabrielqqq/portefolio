@@ -1,5 +1,5 @@
 import { personalInfo } from "@/config"
-import { MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 import Logo from "./logo"
 
 export default function HeroSection() {
@@ -21,6 +21,10 @@ export default function HeroSection() {
             <p>
               <Phone className="inline-block w-4 h-4 mr-2 align-text-top" />
               {personalInfo.phoneNumber}
+            </p>
+            <p>
+              <Mail className="inline-block w-4 h-4 mr-2 align-text-top" />
+              {personalInfo.email}
             </p>
           </div>
         </div>
