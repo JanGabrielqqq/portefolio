@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio3
 
-## Getting Started
+A personal portfolio built with Next.js (App Router) featuring dark/light theming, MDX-powered blog posts, and centralized profile data.
 
-First, run the development server:
-
+## Quick Start
+1) Install deps (Node 18+):
+```bash
+npm install
+```
+2) Run dev server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Visit http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
+- `app/` — routes; dynamic blog at `app/blog/[slug]` renders MDX.
+- `components/` — UI: navbar, hero, social links, work experience, certifications, etc.
+- `content/blog/` — MDX posts (add new posts here).
+- `data/` — data sources (`blogs.ts`, `config.ts` for profile/experience/social data).
+- `public/` — static assets.
+- `app/globals.css` — theme tokens, scrollbar styles, MDX typography.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Blog Workflow (MDX)
+- Add a post at `content/blog/<slug>.mdx` (include `"use client"` only if the content requires client APIs).
+- Register it in `data/blogs.ts` (id/slug, title, date).
+- MDX is rendered via `components/mdx-content.tsx`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commands
+- `npm run dev` — start dev server.
+- `npm run build` — production build.
+- `npm run start` — run built app.
+- `npm run lint` — lint with ESLint.
 
-## Learn More
+## Theming
+- Theme is set early via inline script in `app/layout.tsx`; toggle lives in `components/navbar.tsx` and persists to `localStorage`.
+- Color tokens live in `app/globals.css` (light/dark).
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
+- See `AGENTS.md` for contributor guidelines (structure, style, PR expectations).
+- Keep changes focused and lint before pushing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+- Standard Next.js deploy; no env vars required. Suitable for Vercel or any Node host.
