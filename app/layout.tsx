@@ -1,13 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import { personalInfo } from "@/config"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const fontMono = GeistMono
 
 export const metadata: Metadata = {
   title: personalInfo.metadata.title,
@@ -49,7 +48,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitializer }} />
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`font-mono antialiased ${fontMono.variable}`}>
         <Navbar />
         <main className="pt-16">{children}</main>
         <Analytics />
