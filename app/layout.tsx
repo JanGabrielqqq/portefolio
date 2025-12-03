@@ -37,8 +37,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const themeInitializer = `(() => {
+    const storedTheme = window.localStorage.getItem("theme")
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const theme = storedTheme ?? (systemPrefersDark ? "dark" : "light")
+    document.documentElement.classList.toggle("dark", theme === "dark")
+  })()`
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitializer }} />
+      </head>
       <body className={`font-sans antialiased`}>
         <Navbar />
         <main className="pt-16">{children}</main>

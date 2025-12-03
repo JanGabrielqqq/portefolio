@@ -1,18 +1,19 @@
 "use client"
 
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState, useLayoutEffect } from "react"
 import { Moon, Sun } from "lucide-react"
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false)
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setMounted(true)
-    // Check if dark mode is already applied
-    const isDarkMode = document.documentElement.classList.contains("dark")
-    setIsDark(isDarkMode)
+
+    // Sync toggle state with current document theme (class is set in _document script)
+    const shouldUseDark = document.documentElement.classList.contains("dark")
+    setIsDark(shouldUseDark)
   }, [])
 
   const toggleTheme = () => {
