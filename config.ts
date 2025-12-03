@@ -108,6 +108,22 @@ export const personalInfo = {
       ],
     },
   ],
+  certifications: [
+    {
+      title: "The Complete 2021 Web Development Bootcamp",
+      date: "Sept 23 2021",
+      logo: "JS",
+      instructor: "Dr. Angela Yu",
+      link: "https://www.udemy.com/certificate/UC-5c3ac11d-2915-4626-87bc-0942ef390bc1/",
+    },
+    {
+      title: "React - The Complete Guide (incl. Hooks, React Router, Redux)",
+      date: "Sept 23 2021",
+      logo: "RE",
+      instructor: "Academind by Maximilian Schwarzmüller",
+      link: "https://www.udemy.com/certificate/UC-de1b9159-8eba-4124-8d6c-95a12009af9a/",
+    },
+  ],
   copyrightName: "Que Jan Gabriel",
 }
 

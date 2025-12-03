@@ -4,6 +4,7 @@ import About from "@/components/about"
 import Stack from "@/components/stack"
 import Footer from "@/components/footer"
 import WorkExperience from "@/components/work-experience"
+import Certifications from "@/components/certifications"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <SocialLinks />
         <About />
         <WorkExperience />
+        <Certifications />
         <Stack />
         {/* <Blog /> */}
       </main>
