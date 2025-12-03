@@ -41,7 +41,7 @@
 }
 
 .dark {
-  --background: oklch(0.15 0.01 0);
+  --background: #05070b;
   --foreground: oklch(0.95 0.002 0);
   --card: oklch(0.2 0.01 0);
   --card-foreground: oklch(0.95 0.002 0);
@@ -115,6 +115,90 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+
+  /* Scrollbars: light vs dark */
+  /* Make sure the scrollbar styles apply to the root scrolling element too */
+  html:not(.dark),
+  html:not(.dark) * {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #c1c5cc #f1f3f6;
+  }
+
+  html:not(.dark)::-webkit-scrollbar,
+  html:not(.dark) *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  html:not(.dark)::-webkit-scrollbar-track,
+  html:not(.dark) *::-webkit-scrollbar-track {
+    background: #f1f3f6;
+    border-radius: 4px;
+  }
+
+  html:not(.dark)::-webkit-scrollbar-thumb,
+  html:not(.dark) *::-webkit-scrollbar-thumb {
+    background: #c1c5cc;
+    border-radius: 4px;
+    border: 1px solid #e1e4e8;
+  }
+
+  html:not(.dark)::-webkit-scrollbar-thumb:hover,
+  html:not(.dark) *::-webkit-scrollbar-thumb:hover {
+    background: #aab0ba;
+  }
+
+  html:not(.dark)::-webkit-scrollbar-thumb:active,
+  html:not(.dark) *::-webkit-scrollbar-thumb:active {
+    background: #8891a1;
+  }
+
+  html:not(.dark)::-webkit-scrollbar-corner,
+  html:not(.dark) *::-webkit-scrollbar-corner {
+    background: #f1f3f6;
+  }
+
+  html.dark,
+  html.dark * {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.545 0.041 249.02 / 50%) oklch(0.114 0.008 249.02);
+  }
+
+  html.dark::-webkit-scrollbar,
+  html.dark *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  html.dark::-webkit-scrollbar-track,
+  html.dark *::-webkit-scrollbar-track {
+    background: oklch(0.114 0.008 249.02);
+    border-radius: 4px;
+  }
+
+  html.dark::-webkit-scrollbar-thumb,
+  html.dark *::-webkit-scrollbar-thumb {
+    background: oklch(0.545 0.041 249.02 / 50%);
+    border-radius: 4px;
+    border: 1px solid oklch(0.43 0.033 249.02 / 30%);
+  }
+
+  html.dark::-webkit-scrollbar-thumb:hover,
+  html.dark *::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.71 0.03 249.02 / 70%);
+  }
+
+  html.dark::-webkit-scrollbar-thumb:active,
+  html.dark *::-webkit-scrollbar-thumb:active {
+    background: oklch(0.844 0.104 166.77 / 80%);
+  }
+
+  html.dark::-webkit-scrollbar-corner,
+  html.dark *::-webkit-scrollbar-corner {
+    background: oklch(0.114 0.008 249.02);
+  }
 
 @layer base {
   * {
