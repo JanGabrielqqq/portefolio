@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, X } from "lucide-react"
+import { ArrowRight, Mail } from "lucide-react"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
 import { personalInfo } from "@/config"
 
@@ -26,8 +26,8 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <section className="py-8 sm:py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <section className="pb-8 pt-4 sm:pt-5 sm:pb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
         {socialLinks.map((link) => (
           link.name === "Email" ? (
             <a
@@ -44,7 +44,7 @@ export default function SocialLinks() {
                   </p>
                 </div>
               </div>
-              <span className="text-muted-foreground group-hover:text-foreground transition-colors">→</span>
+              <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
             </a>
           ) : (
             <Link
@@ -63,7 +63,7 @@ export default function SocialLinks() {
                   </p>
                 </div>
               </div>
-              <span className="text-muted-foreground group-hover:text-foreground transition-colors">→</span>
+              <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
             </Link>
           )
         ))}

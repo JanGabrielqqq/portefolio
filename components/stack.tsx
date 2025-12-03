@@ -1,21 +1,36 @@
+import type { ComponentType } from "react"
+import {
+  Atom,
+  Braces,
+  Cloud,
+  Code2,
+  Container,
+  Database,
+  GitBranch,
+  Palette,
+  Server,
+  Triangle,
+  Wind,
+} from "lucide-react"
+
 interface Technology {
   name: string
-  icon: string
+  Icon: ComponentType<{ className?: string }>
 }
 
 const technologies: Technology[] = [
-  { name: "React", icon: "⚛️" },
-  { name: "TypeScript", icon: "📘" },
-  { name: "Next.js", icon: "▲" },
-  { name: "Tailwind CSS", icon: "🎨" },
-  { name: "Node.js", icon: "🟢" },
-  { name: "PostgreSQL", icon: "🐘" },
-  { name: "GraphQL", icon: "◆" },
-  { name: "Docker", icon: "🐳" },
-  { name: "AWS", icon: "☁️" },
-  { name: "Git", icon: "🌳" },
-  { name: "Figma", icon: "🎯" },
-  { name: "Vercel", icon: "▲" },
+  { name: "React", Icon: Atom },
+  { name: "TypeScript", Icon: Code2 },
+  { name: "Next.js", Icon: Triangle },
+  { name: "Tailwind CSS", Icon: Wind },
+  { name: "Node.js", Icon: Server },
+  { name: "PostgreSQL", Icon: Database },
+  { name: "GraphQL", Icon: Braces },
+  { name: "Docker", Icon: Container },
+  { name: "AWS", Icon: Cloud },
+  { name: "Git", Icon: GitBranch },
+  { name: "Figma", Icon: Palette },
+  { name: "Vercel", Icon: Triangle },
 ]
 
 export default function Stack() {
@@ -28,7 +43,7 @@ export default function Stack() {
             key={tech.name}
             className="px-4 py-2 bg-muted/30 hover:bg-muted/50 rounded-full text-sm font-medium text-foreground transition-colors"
           >
-            <span className="mr-2">{tech.icon}</span>
+            <tech.Icon className="inline-block w-4 h-4 mr-2 align-text-top" />
             {tech.name}
           </div>
         ))}

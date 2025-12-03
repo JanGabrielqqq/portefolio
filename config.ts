@@ -1,32 +1,28 @@
 export const personalInfo = {
-  name: "Alex Chen",
-  role: "Full Stack Designer & Developer",
-  location: "San Francisco, CA",
-  email: "hello@alexchen.com",
-  website: "https://alexchen.com",
-  pronouns: "he/him",
+  name: "Que Jan Gabriel",
+  role: "Senior Front End Developer",
+  location: "Meycauayan, Bulacan PH",
+  email: "jangabrielqueue@gmail.com",
+  website: "https://jangabrielque.vercel.app",
+  phoneNumber: "(+63 906) 566 7304",
   metadata: {
-    title: "Alex Chen - Full Stack Designer & Developer",
+    title: "Jan Gabriel H Que - Front End Developer",
     description:
-      "Portfolio of Alex Chen, a full stack designer and developer specializing in creating high-performance, user-centric digital experiences.",
+      "Portfolio of Jan Gabriel H Que, a senior front end developer specializing in building optimized high-performance web apps.",
   },
   social: {
-    linkedin: "https://linkedin.com/in/alexchen",
-    github: "https://github.com/alexchen",
-    twitter: "https://twitter.com/alexchen",
-    email: "mailto:hello@alexchen.com",
+    linkedin: "https://linkedin.com/in/jangabrielque",
+    github: "https://github.com/jangabrielqqq",
+    email: "mailto:jangabrielqqq@gmail.com",
     handles: {
-      linkedin: "alexchen",
-      github: "alexchen",
-      twitter: "@alexchen",
+      linkedin: "jangabrielque",
+      github: "jangabrielqqq",
     },
   },
   about: [
-    "I'm a full-stack designer and developer passionate about creating high-performance, user-centric digital experiences. With over 8 years of experience, I specialize in building intuitive interfaces and robust backend systems using modern web technologies.",
-    "My work spans across design systems, product design, and full-stack development. I believe great software is the intersection of beautiful design and solid engineering, where every pixel and every line of code serves a purpose.",
-    "Currently, I'm working on innovative products that push the boundaries of web technology. When I'm not coding or designing, you can find me exploring new technologies, contributing to open source, or writing about design and development.",
+    "I'm a senior frontend developer passionate about creating high-performance, user-centric digital experiences. With over 4 years of experience, I specialize in building intuitive interfaces using modern web technologies.",
   ],
-  copyrightName: "Alex Chen",
+  copyrightName: "Que Jan Gabriel",
 }
 
 export type PersonalInfo = typeof personalInfo
