@@ -1,35 +1,29 @@
 import Link from "next/link"
+import { personalInfo } from "@/config"
 
-interface SocialLink {
-  name: string
-  handle: string
-  url: string
-  icon: string
-}
-
-const socialLinks: SocialLink[] = [
+const socialLinks = [
   {
     name: "LinkedIn",
-    handle: "alexchen",
-    url: "https://linkedin.com",
+    handle: personalInfo.social.handles.linkedin,
+    url: personalInfo.social.linkedin,
     icon: "💼",
   },
   {
     name: "GitHub",
-    handle: "alexchen",
-    url: "https://github.com",
+    handle: personalInfo.social.handles.github,
+    url: personalInfo.social.github,
     icon: "🐙",
   },
   {
     name: "Twitter",
-    handle: "@alexchen",
-    url: "https://twitter.com",
+    handle: personalInfo.social.handles.twitter,
+    url: personalInfo.social.twitter,
     icon: "𝕏",
   },
   {
     name: "Email",
-    handle: "hello@alexchen.com",
-    url: "mailto:hello@alexchen.com",
+    handle: personalInfo.email,
+    url: personalInfo.social.email,
     icon: "✉️",
   },
 ]

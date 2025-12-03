@@ -4,14 +4,14 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import Navbar from "@/components/navbar"
+import { personalInfo } from "@/config"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alex Chen - Full Stack Designer & Developer",
-  description:
-    "Portfolio of Alex Chen, a full stack designer and developer specializing in creating high-performance, user-centric digital experiences.",
+  title: personalInfo.metadata.title,
+  description: personalInfo.metadata.description,
   generator: "v0.app",
   icons: {
     icon: [
