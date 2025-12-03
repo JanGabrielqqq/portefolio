@@ -20,7 +20,8 @@ export const personalInfo = {
     },
   },
   about: [
-    "I'm a senior frontend developer passionate about creating high-performance, user-centric digital experiences. With over 4 years of experience, I specialize in building intuitive interfaces using modern web technologies.",
+    "Frontend developer with 4+ years of experience effectively collaborating with both technical and non-technical stakeholders to deliver polished and performant user experiences.",
+    "Continuously exploring innovative web and AI technologies to improve efficiency and craft exceptional user experiences.",
   ],
   copyrightName: "Que Jan Gabriel",
 }

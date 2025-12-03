@@ -2,7 +2,6 @@ import HeroSection from "@/components/hero-section"
 import SocialLinks from "@/components/social-links"
 import About from "@/components/about"
 import Stack from "@/components/stack"
-import Blog from "@/components/blog"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
         <SocialLinks />
         <About />
         <Stack />
-        <Blog />
+        {/* <Blog /> */}
       </main>
       <Footer />
     </div>
