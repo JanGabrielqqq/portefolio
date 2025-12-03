@@ -22,10 +22,6 @@ export default function HeroSection() {
             <span className="inline-block w-6">🔗</span>
             {personalInfo.website.replace(/https?:\/\//, "")}
           </p>
-          <p>
-            <span className="inline-block w-6">💬</span>
-            {personalInfo.pronouns}
-          </p>
         </div>
       </div>
     </section>
