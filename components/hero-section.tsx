@@ -1,6 +1,15 @@
+"use client"
+
 import { personalInfo } from "@/config"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Copy } from "lucide-react"
 import Logo from "./logo"
+
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(personalInfo.location)}`
+
+function copyPhone() {
+  const raw = personalInfo.phoneNumber.replace(/[\s()]/g, "")
+  navigator.clipboard?.writeText(raw)
+}
 
 export default function HeroSection() {
   return (
@@ -13,19 +22,35 @@ export default function HeroSection() {
             <p className="text-lg sm:text-xl text-muted-foreground mt-2">{personalInfo.role}</p>
           </div>
 
-          <div className="space-y-2 my-2 text-sm sm:text-base leading-relaxed text-muted-foreground">
-            <p>
-              <MapPin className="inline-block w-4 h-4 mr-2 align-text-top" />
-              {personalInfo.location}
-            </p>
-            <p>
-              <Phone className="inline-block w-4 h-4 mr-2 align-text-top" />
-              {personalInfo.phoneNumber}
-            </p>
-            <p>
-              <Mail className="inline-block w-4 h-4 mr-2 align-text-top" />
-              {personalInfo.email}
-            </p>
+          <div className="space-y-2 my-2 flex flex-col text-sm sm:text-base leading-relaxed text-muted-foreground">
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+            >
+              <MapPin className="w-4 h-4" />
+              <span>{personalInfo.location}</span>
+            </a>
+
+            <button
+              type="button"
+              onClick={copyPhone}
+              className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+              aria-label="Copy phone number"
+            >
+              <Phone className="w-4 h-4" />
+              <span>{personalInfo.phoneNumber}</span>
+              <Copy className="w-4 h-4" />
+            </button>
+
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              <span>{personalInfo.email}</span>
+            </a>
           </div>
         </div>
 
