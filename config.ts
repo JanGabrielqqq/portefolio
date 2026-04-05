@@ -1,3 +1,5 @@
+import { title } from "process"
+
 export const personalInfo = {
   name: "Que Jan Gabriel",
   role: "Senior Front End Developer",
@@ -125,6 +127,13 @@ export const personalInfo = {
       instructor: "Academind by Maximilian Schwarzmüller",
       link: "https://www.udemy.com/certificate/UC-de1b9159-8eba-4124-8d6c-95a12009af9a/",
     },
+    {
+      title: "Next.js App Router Fundamentals",
+      date: "April 5 2026",
+      logo: "NE",
+      instructor: "Guillermo Raunch",
+      link: "https://nextjs.org/learn/certificate?course=dashboard-app&user=113499&certId=dashboard-app-113499-1760868580235",
+    }
   ],
   copyrightName: "Que Jan Gabriel",
 }
